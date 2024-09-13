@@ -33,6 +33,8 @@
             txtNum2 = new TextBox();
             btnCalculate = new Button();
             cbxOperation = new ComboBox();
+            btnRunningTotal = new Button();
+            lblRt = new Label();
             SuspendLayout();
             // 
             // label1
@@ -80,12 +82,32 @@
             cbxOperation.Size = new Size(98, 23);
             cbxOperation.TabIndex = 4;
             // 
+            // btnRunningTotal
+            // 
+            btnRunningTotal.Location = new Point(68, 156);
+            btnRunningTotal.Name = "btnRunningTotal";
+            btnRunningTotal.Size = new Size(100, 30);
+            btnRunningTotal.TabIndex = 5;
+            btnRunningTotal.Text = "Running Total ";
+            btnRunningTotal.UseVisualStyleBackColor = true;
+            btnRunningTotal.Click += btnRunningTotal_Click;
+            // 
+            // lblRt
+            // 
+            lblRt.BackColor = Color.Azure;
+            lblRt.Location = new Point(174, 156);
+            lblRt.Name = "lblRt";
+            lblRt.Size = new Size(82, 27);
+            lblRt.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
-            ClientSize = new Size(285, 173);
+            ClientSize = new Size(311, 213);
+            Controls.Add(lblRt);
+            Controls.Add(btnRunningTotal);
             Controls.Add(cbxOperation);
             Controls.Add(btnCalculate);
             Controls.Add(txtNum2);
@@ -104,5 +126,7 @@
         private TextBox txtNum2;
         private Button btnCalculate;
         private ComboBox cbxOperation;
+        private Button btnRunningTotal;
+        private Label lblRt;
     }
 }

@@ -6,6 +6,8 @@ namespace IntroToMethods
     {
         //global variables
         Single num1, num2, answer;
+        Single runningTotal;
+
 
         public Form1()
         {
@@ -82,12 +84,22 @@ namespace IntroToMethods
         private string Multiply(float number1, float number2)
         {
             //do the calculation
-            answer = number1 + number2;
+            float answer = number1 + number2;
             //format the output for use as a string
             return answer.ToString();
         }
 
+        private void btnRunningTotal_Click(object sender, EventArgs e)
+        {
+            float num1 = Convert.ToSingle(txtNum1.Text);
+            lblRt.Text = RunningTotal(num1);
 
+        }
 
+        private string RunningTotal(float rt)
+        {
+            runningTotal += rt;
+            return runningTotal.ToString();
+        }
     }
 }
